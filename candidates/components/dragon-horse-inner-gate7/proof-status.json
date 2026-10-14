@@ -1,0 +1,12 @@
+{
+  "shortest_plies": 7,
+  "upper_verified": true,
+  "lower_verified": true,
+  "lower_uses_drops_or_quiet_nonking_moves": false,
+  "mating_leaves": 1,
+  "hand_empty_leaves": 1,
+  "pawn1_nomate_verified": false,
+  "reset_proved": false,
+  "composition_uniqueness_unproved": true,
+  "record_goal_achieved": false
+}

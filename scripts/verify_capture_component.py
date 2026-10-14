@@ -3,15 +3,15 @@ import json,sys
 from pathlib import Path
 from collections import Counter
 import shogi,cshogi as cs
-from orthodox_legal import legal_moves
+from orthodox_legal import legal_moves,is_legal
 def state(b):return ' '.join(b.sfen().split()[:3])
-def pair(sfen):
+def pair(sfen,compare_all=True):
     b=shogi.Board(sfen);n=cs.Board(sfen)
-    assert {m.usi() for m in legal_moves(b)}=={cs.move_to_usi(m) for m in n.legal_moves}
+    if compare_all:assert {m.usi() for m in legal_moves(b)}=={cs.move_to_usi(m) for m in n.legal_moves}
     return b,n
 def push(b,n,u):
-    assert u in {m.usi() for m in legal_moves(b)}
-    assert u in {cs.move_to_usi(m) for m in n.legal_moves}
+    assert is_legal(b,shogi.Move.from_usi(u))
+    assert n.is_legal(n.move_from_usi(u))
     b.push_usi(u);n.push_usi(u);assert b.sfen()==n.sfen()
 def main(folder):
     positive=json.loads((folder/'upper-proof.json').read_text());negative=json.loads((folder/'lower-proof.json').read_text())
@@ -44,7 +44,7 @@ def main(folder):
     nodes=negative['strategy_dag']['nodes'];seen=set()
     def lower_walk(i):
         if i in seen:return
-        row=nodes[i];b,n=pair(row['state']+' 1');depth=row['depth']
+        row=nodes[i];b,n=pair(row['state']+' 1',compare_all=row['state'].split()[1]=='b');depth=row['depth']
         if row.get('horizon'):
             assert depth==0 and (b.turn==shogi.BLACK or list(legal_moves(b)));seen.add(i);return
         children=row['children'];actual={r['move'] for r in children}
@@ -60,7 +60,9 @@ def main(folder):
             u=children[0]['move'];m=shogi.Move.from_usi(u)
             if m.drop_piece_type:assert (row['state'],u) in witnesses
         for r in children:
-            q,t=pair(row['state']+' 1');push(q,t,r['move']);child=nodes[r['next']]
+            # A negative strategy selects one White reply; its other legal
+            # replies are irrelevant. Black checks remain exhaustively covered.
+            q,t=pair(row['state']+' 1',compare_all=False);push(q,t,r['move']);child=nodes[r['next']]
             assert state(q)==child['state'] and child['depth']==depth-1
             if b.turn==shogi.BLACK:assert q.is_check()
             lower_walk(r['next'])

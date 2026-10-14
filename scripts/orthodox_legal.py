@@ -21,15 +21,24 @@ def has_board_evasion(board):
         if safe:return True
     return False
 
-def legal_moves(board):
+def _safe_after(board,move):
     color=board.turn
+    target=board.piece_at(move.to_square)
+    if target and target.piece_type==shogi.KING:return False
+    board.push(move)
+    safe=king_safe(board,color)
+    if safe and move.drop_piece_type==shogi.PAWN:
+        pawn_target=move.to_square+(-9 if color==shogi.BLACK else 9)
+        if pawn_target==board.king_squares[color^1] and not has_board_evasion(board):safe=False
+    board.pop()
+    return safe
+
+def is_legal(board,move):
+    if move.drop_piece_type:
+        if move.drop_piece_type not in range(shogi.PAWN,shogi.KING):return False
+        if board.piece_at(move.to_square):return False
+    return board.is_pseudo_legal(move) and _safe_after(board,move)
+
+def legal_moves(board):
     for move in list(board.generate_pseudo_legal_moves()):
-        target=board.piece_at(move.to_square)
-        if target and target.piece_type==shogi.KING:continue
-        board.push(move)
-        safe=king_safe(board,color)
-        if safe and move.drop_piece_type==shogi.PAWN:
-            pawn_target=move.to_square+(-9 if color==shogi.BLACK else 9)
-            if pawn_target==board.king_squares[color^1] and not has_board_evasion(board):safe=False
-        board.pop()
-        if safe:yield move
+        if _safe_after(board,move):yield move

@@ -55,4 +55,10 @@ python scripts/run_search.py --candidate horse-5d --seconds 5 --nodes 10000 --ou
 
 `orthodox_legal.py` は打歩詰判定で、ピンされた駒の捕獲を逃れと誤認しないよう、実際に自玉が安全な応手を列挙します。`scripts/check_pawn_drop_rule.py` は禁止される歩打ち、許される盤上歩の前進、逃げ道のある歩打ちをnative側と照合します。
 
+## 龍の往復を取り出した四枚の内側部品
+
+`candidates/components/dragon-horse-inner-gate7/` は攻方龍22・馬44、玉方玉14・角47、攻方持歩二枚の部品です。全応手7手以内詰と5手以内詰の排除（292局面）を独立検証済み。最短7手で持駒を使い切ります。再現：`python scripts/verify_capture_component.py candidates/components/dragon-horse-inner-gate7`。
+
+龍は22へ戻り、馬と角は動かず、玉の位置と歩の所在が変わります。ただしその時点で詰むため反復は未成立です。歩一枚での不詰・外側との接続・復元・完全な作品としての余詰検査は未完了。短い部品の完成を記録更新と扱いません。
+
 不詰証明を27局面へ簡約しました。唯一の選択された合駒△１八歩は、攻方飛に取らせて玉がその飛を取るためのものです。遠い合駒を重ねる旧証明から置き換えました。閉じた戦略には循環もありますが、王手を続けて循環する攻方は有限の詰みに至れません。
