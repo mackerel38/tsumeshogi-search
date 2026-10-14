@@ -40,3 +40,7 @@ python scripts/run_search.py --candidate horse-5d --seconds 5 --nodes 10000 --ou
 再現：`python research/bounded_mate_component.py`。証拠：`candidates/007-exact11-proof.json`。無駄合に依存しない玉の逃げで9手以内の詰みを否定し、歩の接触王手で11手以内の詰みを証明する。反復はない。全余詰の検査は未完了。
 
 空間・駒種変換の実験候補：`spatial-pawn37-38`, `spatial-lance68-67`, `spatial-silver62-promote`, `spatial-pawn26-demote`。各候補の `-target.json` は、持駒を変えず盤面の一箇所だけを変える出口条件。選択経路・強制とも未成立。
+
+## 棄却した初形004
+
+004/no-king-coreの初形は不詰を独立検証しました。全攻方王手を含む207局面・246辺の玉方戦略が閉じ、詰みに至りません。初手の王手２種類（飛24xと26、金47x歩37）には、いずれも玉27→18を選ぶ戦略があります。再現：`python scripts/verify_nomate.py candidates/004-nomate-certificate.json`。初形004からの変換経路は部品の協力実験であり、完成作品の候補としては棄却します。

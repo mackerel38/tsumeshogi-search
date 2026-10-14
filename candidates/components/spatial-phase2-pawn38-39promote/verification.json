@@ -1,0 +1,19 @@
+{
+  "name": "spatial-phase2-pawn38-39promote",
+  "first_plies": 164,
+  "second_plies": 52,
+  "total_plies": 216,
+  "validation": {
+    "valid": true,
+    "plies": 216,
+    "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/5G1k1/3L5/6+p2 b rb3gs3n3l16p 257",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "forced_composition_proved": false,
+  "initial_nomate_proved": true,
+  "initial_nomate_certificate": "no-king-core-initial-nomate-graph.json",
+  "entry_initial_nomate_proved": true,
+  "entry_certificate": "004-nomate-certificate.json"
+}

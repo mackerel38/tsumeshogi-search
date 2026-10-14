@@ -25,5 +25,7 @@
   "forced_transition_proved": false,
   "optimal_transition_length_proved": false,
   "tsume_rule_conformity_proved": false,
-  "actions_run": 38490649867
+  "actions_run": 38490649867,
+  "entry_initial_nomate_proved": true,
+  "entry_certificate": "004-nomate-certificate.json"
 }

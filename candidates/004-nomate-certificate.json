@@ -1,0 +1,1034 @@
+{
+  "scope": "Build a finite closed defender strategy graph, then independently verify it.\n\nEvery Black checking move must remain in the graph. White selects one legal\nreply. No White mating terminal is admitted. Finite closed cycles cannot prove\na forced finite mate, so cycles are valid NoMate evidence (unlike mate proofs).\nEngine NoMate reports guide White choices only and are never proof leaves.\n",
+  "initial": "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b rb3gs3n3l16p 41",
+  "nodes": {
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b rb3gs3n3l16p": {
+      "attacks": {
+        "2d2f": "9/3S5/7N1/9/6B1S/3S3R1/5Gpk1/3L5/9 w Prb3gs3n3l16p",
+        "4g3g": "9/3S5/7N1/7R1/6B1S/3S3+p1/6Gk1/3L5/9 w Prb3gs3n3l16p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gpk1/3L5/9 w Prb3gs3n3l16p": {
+      "reply": "2g1h",
+      "next": "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/9 b Prb3gs3n3l16p"
+    },
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/6Gk1/3L5/9 w Prb3gs3n3l16p": {
+      "reply": "2g1h",
+      "next": "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L4k/9 b Prb3gs3n3l16p"
+    },
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/9 b Prb3gs3n3l16p": {
+      "attacks": {
+        "P*1i": "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/8P w rb3gs3n3l16p",
+        "2f1f": "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L4k/9 w Prb3gs3n3l16p",
+        "2f2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Rk/9 w Prb3gs3n3l16p"
+      }
+    },
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L4k/9 b Prb3gs3n3l16p": {
+      "attacks": {
+        "P*1i": "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L4k/8P w rb3gs3n3l16p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/8P w rb3gs3n3l16p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L5/8k b rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L4k/9 w Prb3gs3n3l16p": {
+      "reply": "1h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L5/7k1 b Prb3gs3n3l16p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Rk/9 w Prb3gs3n3l16p": {
+      "reply": "1h2h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b P2rb3gs3n3l16p"
+    },
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L4k/8P w rb3gs3n3l16p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L5/8k b rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L5/8k b rb3gs3n3l17p": {
+      "attacks": {
+        "2f1f": "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L5/8k w rb3gs3n3l17p",
+        "2f2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Rk w rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L5/7k1 b Prb3gs3n3l16p": {
+      "attacks": {
+        "1f1i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kR w Prb3gs3n3l16p",
+        "1f2f": "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L5/7k1 w Prb3gs3n3l16p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b P2rb3gs3n3l16p": {
+      "attacks": {
+        "P*2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/7P1 w 2rb3gs3n3l16p",
+        "3e1g": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w P2rb3gs3n3l16p"
+      }
+    },
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L5/8k b rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L5/8k w rb3gs3n3l17p": {
+      "reply": "B*1g",
+      "next": "9/3S5/7N1/9/6B1S/3S4R/5Gp1b/3L5/8k b r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Rk w rb3gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kR w Prb3gs3n3l16p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b P2rb3gs3n3l16p"
+    },
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L5/7k1 w Prb3gs3n3l16p": {
+      "reply": "2i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/9 b Prb3gs3n3l16p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/7P1 w 2rb3gs3n3l16p": {
+      "reply": "2h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w P2rb3gs3n3l16p": {
+      "reply": "2h2i",
+      "next": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L5/7k1 b P2rb3gs3n3l16p"
+    },
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp1b/3L5/8k b r3gs3n3l17p": {
+      "attacks": {
+        "1f1g": "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L5/8k w Br3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b P2rb3gs3n3l16p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp1B/3L5/7k1 b P2rb3gs3n3l16p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L5/8k w Br3gs3n3l17p": {
+      "reply": "G*1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L4g/8k b Br2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L4g/8k b Br2gs3n3l17p": {
+      "attacks": {
+        "B*2h": "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L3Bg/8k w r2gs3n3l17p",
+        "1g1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4R/8k w BGr2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L3Bg/8k w r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L3Bg/7k1 b r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4R/8k w BGr2gs3n3l17p": {
+      "reply": "1i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b BG2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L3Bg/7k1 b r2gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b BG2r2gs3n3l17p": {
+      "attacks": {
+        "B*8a": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p",
+        "B*7b": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p",
+        "G*1g": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L4k/9 w B2r2gs3n3l17p",
+        "G*1i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/8G w B2r2gs3n3l17p",
+        "B*2g": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4k/9 w G2r2gs3n3l17p",
+        "G*2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Gk/9 w B2r2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7G1 w B2r2gs3n3l17p",
+        "B*2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7B1 w G2r2gs3n3l17p",
+        "B*3f": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4k/9 w G2r2gs3n3l17p",
+        "B*4e": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p",
+        "B*5d": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p",
+        "B*6c": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L4k/9 w B2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L5/8k b B2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/8G w B2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b B2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Gk/9 w B2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/8k b B2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7G1 w B2r2gs3n3l17p": {
+      "reply": "1h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b B2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7B1 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Bk b G2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4k/9 w G2r2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p",
+        "8a1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w G2r2gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p",
+        "7b1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w G2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L5/8k b B2r2gs3n3l17p": {
+      "attacks": {
+        "B*2h": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L3B1/8k w 2r2gs3n3l17p",
+        "1g1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w B2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b B2r3gs3n3l17p": {
+      "attacks": {
+        "B*2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7Gk w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/8k b B2r2gs3n3l17p": {
+      "attacks": {
+        "2h1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w B2r2gs3n3l17p",
+        "2h2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w B2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b B2r3gs3n3l17p": {
+      "attacks": {
+        "B*1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p",
+        "B*3h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B2/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Bk b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7Bk w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7Gk w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": {
+      "attacks": {
+        "G*1h": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p",
+        "G*2i": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p",
+        "6c1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w G2r2gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w G2r2gs3n3l17p": {
+      "reply": "1i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b G2rb2gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L3B1/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L3B1/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/8k w B2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b B2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p": {
+      "reply": "1i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Bk/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Gk w B2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b B2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p": {
+      "reply": "2i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B2/7k1 w 2r3gs3n3l17p": {
+      "reply": "3g3h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5G3/3L2p2/7k1 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7Bk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2rb2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4G/8k w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7Gk w 2r2gs3n3l17p": {
+      "reply": "1i2i",
+      "next": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "8a1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/7k1 w 2r3gs3n3l17p",
+        "8a1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b G2rb2gs3n3l17p": {
+      "attacks": {
+        "G*1g": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L4k/9 w 2rb2gs3n3l17p",
+        "G*1i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/8G w 2rb2gs3n3l17p",
+        "G*2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Gk/9 w 2rb2gs3n3l17p",
+        "G*2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7G1 w 2rb2gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "7b1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/7k1 w 2r3gs3n3l17p",
+        "7b1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L3B1/7k1 b 2r2gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b B2r2gs3n3l17p": {
+      "attacks": {
+        "B*3h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1G/7k1 w 2r2gs3n3l17p",
+        "1h1i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w B2r2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w B2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Bk/9 b 2r3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "2g3h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1G/7k1 w 2r2gs3n3l17p",
+        "1h1i": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "2g1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p",
+        "2g3h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B2/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b 2rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5G3/3L2p2/7k1 b 2rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2rb2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2rb2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2rb2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3f1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "4e1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "5d1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": {
+      "attacks": {
+        "1h1i": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p",
+        "1h2h": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": {
+      "attacks": {
+        "6c1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/7k1 w 2r3gs3n3l17p",
+        "6c1h": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4B/7k1 w 2r3gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/7k1 w 2r3gs3n3l17p": {
+      "reply": "2i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L4k/9 w 2rb2gs3n3l17p": {
+      "reply": "1h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L5/7k1 b 2rb2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/8G w 2rb2gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3Gk/9 w 2rb2gs3n3l17p": {
+      "reply": "1h2h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7G1 w 2rb2gs3n3l17p": {
+      "reply": "1h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2rb3gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1G/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1k/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w B2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b B2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w B2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/8k b B2r2gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2rb2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2rb2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7kG w 2r2gs3n3l17p": {
+      "reply": "2i1i",
+      "next": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L3G1/7k1 w 2r2gs3n3l17p": {
+      "reply": "2i2h",
+      "next": "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "8a1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "1B7/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p",
+        "8a1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k+B/9 w 2r3gs3n3l17p",
+        "8a2g+": "9/3S5/7N1/9/6B1S/3S5/5Gp+B1/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L5/7k1 b 2rb2gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "7b1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/2BS5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p",
+        "7b1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k+B/9 w 2r3gs3n3l17p",
+        "7b2g+": "9/3S5/7N1/9/6B1S/3S5/5Gp+B1/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1k/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3h2g": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4k/9 w 2r3gs3n3l17p",
+        "3h2i": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7B1 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/7N1/9/8S/3S5/5GpBB/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/7N1/9/8S/3S2B2/5Gp1B/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/7N1/9/5B2S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/7N1/4B4/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "6c1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": {
+      "attacks": {
+        "3e1g": "9/3S5/3B3N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p",
+        "6c1h+": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k+B/9 w 2r3gs3n3l17p",
+        "6c2g+": "9/3S5/7N1/9/6B1S/3S5/5Gp+B1/3L3k1/9 w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4+B/8k w 2r3gs3n3l17p": {
+      "reply": "1i1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1i",
+      "next": "1B7/3S5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k+B/9 w 2r3gs3n3l17p": {
+      "reply": "2h1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp+B1/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h2g",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gpk1/3L5/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2rb3gs3n3l17p": {
+      "reply": "2h1h",
+      "next": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1i",
+      "next": "9/2BS5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4k/9 w 2r3gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b 2r3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/7B1 w 2r3gs3n3l17p": {
+      "reply": "1h2i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5GpBB/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1g",
+      "next": "9/3S5/7N1/9/8S/3S5/5GpBk/3L5/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S2B2/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1g",
+      "next": "9/3S5/7N1/9/8S/3S2B2/5Gp1k/3L5/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/5B2S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1g",
+      "next": "9/3S5/7N1/9/5B2S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/4B4/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1g",
+      "next": "9/3S5/7N1/4B4/8S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/3B3N1/9/8S/3S5/5Gp1B/3L3k1/9 w 2r3gs3n3l17p": {
+      "reply": "2h1i",
+      "next": "9/3S5/3B3N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "1g2h": "1B7/3S5/7N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p",
+        "8a1h+": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/5Gpk1/3L5/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "4g3g": "9/3S5/7N1/9/6B1S/3S5/6Gk1/3L5/9 w P2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4k/9 b 2rb3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/2BS5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "1g2h": "9/2BS5/7N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p",
+        "7b1h+": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/8S/3S5/5GpBk/3L5/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "1e2f": "9/3S5/7N1/9/9/3S3S1/5GpBk/3L5/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/8S/3S2B2/5Gp1k/3L5/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "1e2f": "9/3S5/7N1/9/9/3S2BS1/5Gp1k/3L5/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5B2S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "1e2f": "9/3S5/7N1/9/5B3/3S3S1/5Gp1k/3L5/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/8S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "1e2f": "9/3S5/7N1/4B4/9/3S3S1/5Gp1k/3L5/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": {
+      "attacks": {
+        "1g2h": "9/3S5/3B3N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p",
+        "6c1h+": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4+B/8k w 2r3gs3n3l17p"
+      }
+    },
+    "1B7/3S5/7N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p": {
+      "reply": "1i2h",
+      "next": "1B7/3S5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4+B/8k w 2r3gs3n3l17p": {
+      "reply": "1i1h",
+      "next": "9/3S5/7N1/9/8S/3S5/5Gp1B/3L4k/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/6Gk1/3L5/9 w P2rb3gs3n3l17p": {
+      "reply": "2g1h",
+      "next": "9/3S5/7N1/9/6B1S/3S5/6G2/3L4k/9 b P2rb3gs3n3l17p"
+    },
+    "9/2BS5/7N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p": {
+      "reply": "1i2h",
+      "next": "9/2BS5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/9/3S3S1/5GpBk/3L5/9 w 2rb3gs3n3l17p": {
+      "reply": "1g2g",
+      "next": "9/3S5/7N1/9/9/3S3S1/5Gpk1/3L5/9 b 2r2b3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/9/3S2BS1/5Gp1k/3L5/9 w 2rb3gs3n3l17p": {
+      "reply": "1g2f",
+      "next": "9/3S5/7N1/9/9/3S2Bk1/5Gp2/3L5/9 b 2rb3g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/5B3/3S3S1/5Gp1k/3L5/9 w 2rb3gs3n3l17p": {
+      "reply": "1g2f",
+      "next": "9/3S5/7N1/9/5B3/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p"
+    },
+    "9/3S5/7N1/4B4/9/3S3S1/5Gp1k/3L5/9 w 2rb3gs3n3l17p": {
+      "reply": "1g2f",
+      "next": "9/3S5/7N1/4B4/9/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p"
+    },
+    "9/3S5/3B3N1/9/8S/3S5/5Gp2/3L3B1/8k w 2r3gs3n3l17p": {
+      "reply": "1i2h",
+      "next": "9/3S5/3B3N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p"
+    },
+    "1B7/3S5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "8a1h+": "9/3S5/7N1/9/8S/3S5/5Gp2/3L3k+B/9 w 2rb3gs3n3l17p",
+        "8a2g+": "9/3S5/7N1/9/8S/3S5/5Gp+B1/3L3k1/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/6G2/3L4k/9 b P2rb3gs3n3l17p": {
+      "attacks": {
+        "P*1i": "9/3S5/7N1/9/6B1S/3S5/6G2/3L4k/8P w 2rb3gs3n3l17p"
+      }
+    },
+    "9/2BS5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "7b1h+": "9/3S5/7N1/9/8S/3S5/5Gp2/3L3k+B/9 w 2rb3gs3n3l17p",
+        "7b2g+": "9/3S5/7N1/9/8S/3S5/5Gp+B1/3L3k1/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/9/3S3S1/5Gpk1/3L5/9 b 2r2b3gs3n3l17p": {
+      "attacks": {
+        "4g3g": "9/3S5/7N1/9/9/3S3S1/6Gk1/3L5/9 w P2r2b3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/9/3S2Bk1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": {
+      "attacks": {
+        "4g3g": "9/3S5/7N1/9/9/3S2Bk1/6G2/3L5/9 w P2rb3g2s3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5B3/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": {
+      "attacks": {
+        "4g3f": "9/3S5/7N1/9/5B3/3S2Gk1/6p2/3L5/9 w 2rb3g2s3n3l17p",
+        "4g3g": "9/3S5/7N1/9/5B3/3S3k1/6G2/3L5/9 w P2rb3g2s3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/9/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": {
+      "attacks": {
+        "4g3f": "9/3S5/7N1/4B4/9/3S2Gk1/6p2/3L5/9 w 2rb3g2s3n3l17p",
+        "4g3g": "9/3S5/7N1/4B4/9/3S3k1/6G2/3L5/9 w P2rb3g2s3n3l17p"
+      }
+    },
+    "9/3S5/3B3N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": {
+      "attacks": {
+        "6c1h+": "9/3S5/7N1/9/8S/3S5/5Gp2/3L3k+B/9 w 2rb3gs3n3l17p",
+        "6c2g+": "9/3S5/7N1/9/8S/3S5/5Gp+B1/3L3k1/9 w 2rb3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp2/3L3k+B/9 w 2rb3gs3n3l17p": {
+      "reply": "2h1h",
+      "next": "9/3S5/7N1/9/8S/3S5/5Gp2/3L4k/9 b 2r2b3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp+B1/3L3k1/9 w 2rb3gs3n3l17p": {
+      "reply": "2h2g",
+      "next": "9/3S5/7N1/9/8S/3S5/5Gpk1/3L5/9 b 2r2b3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/6B1S/3S5/6G2/3L4k/8P w 2rb3gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/6B1S/3S5/6G2/3L5/8k b 2rb3gs3n3l18p"
+    },
+    "9/3S5/7N1/9/9/3S3S1/6Gk1/3L5/9 w P2r2b3gs3n3l17p": {
+      "reply": "2g1h",
+      "next": "9/3S5/7N1/9/9/3S3S1/6G2/3L4k/9 b P2r2b3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/9/3S2Bk1/6G2/3L5/9 w P2rb3g2s3n3l17p": {
+      "reply": "2f3g",
+      "next": "9/3S5/7N1/9/9/3S2B2/6k2/3L5/9 b P2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/5B3/3S2Gk1/6p2/3L5/9 w 2rb3g2s3n3l17p": {
+      "reply": "2f1g",
+      "next": "9/3S5/7N1/9/5B3/3S2G2/6p1k/3L5/9 b 2rb3g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/5B3/3S3k1/6G2/3L5/9 w P2rb3g2s3n3l17p": {
+      "reply": "2f3g",
+      "next": "9/3S5/7N1/9/5B3/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/4B4/9/3S2Gk1/6p2/3L5/9 w 2rb3g2s3n3l17p": {
+      "reply": "2f1g",
+      "next": "9/3S5/7N1/4B4/9/3S2G2/6p1k/3L5/9 b 2rb3g2s3n3l17p"
+    },
+    "9/3S5/7N1/4B4/9/3S3k1/6G2/3L5/9 w P2rb3g2s3n3l17p": {
+      "reply": "2f3g",
+      "next": "9/3S5/7N1/4B4/9/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gp2/3L4k/9 b 2r2b3gs3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/8S/3S5/5Gpk1/3L5/9 b 2r2b3gs3n3l17p": {
+      "attacks": {
+        "4g3g": "9/3S5/7N1/9/8S/3S5/6Gk1/3L5/9 w P2r2b3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/6B1S/3S5/6G2/3L5/8k b 2rb3gs3n3l18p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/9/3S3S1/6G2/3L4k/9 b P2r2b3gs3n3l17p": {
+      "attacks": {
+        "P*1i": "9/3S5/7N1/9/9/3S3S1/6G2/3L4k/8P w 2r2b3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/9/3S2B2/6k2/3L5/9 b P2rb4g2s3n3l17p": {
+      "attacks": {
+        "P*3h": "9/3S5/7N1/9/9/3S2B2/6k2/3L2P2/9 w 2rb4g2s3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/5B3/3S2G2/6p1k/3L5/9 b 2rb3g2s3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/5B3/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p": {
+      "attacks": {
+        "P*3h": "9/3S5/7N1/9/5B3/3S5/6k2/3L2P2/9 w 2rb4g2s3n3l17p"
+      }
+    },
+    "9/3S5/7N1/4B4/9/3S2G2/6p1k/3L5/9 b 2rb3g2s3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/4B4/9/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p": {
+      "attacks": {
+        "P*3h": "9/3S5/7N1/4B4/9/3S5/6k2/3L2P2/9 w 2rb4g2s3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/8S/3S5/6Gk1/3L5/9 w P2r2b3gs3n3l17p": {
+      "reply": "2g1h",
+      "next": "9/3S5/7N1/9/8S/3S5/6G2/3L4k/9 b P2r2b3gs3n3l17p"
+    },
+    "9/3S5/7N1/9/9/3S3S1/6G2/3L4k/8P w 2r2b3gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/9/3S3S1/6G2/3L5/8k b 2r2b3gs3n3l18p"
+    },
+    "9/3S5/7N1/9/9/3S2B2/6k2/3L2P2/9 w 2rb4g2s3n3l17p": {
+      "reply": "3g2f",
+      "next": "9/3S5/7N1/9/9/3S2Bk1/9/3L2P2/9 b 2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/5B3/3S5/6k2/3L2P2/9 w 2rb4g2s3n3l17p": {
+      "reply": "3g2f",
+      "next": "9/3S5/7N1/9/5B3/3S3k1/9/3L2P2/9 b 2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/4B4/9/3S5/6k2/3L2P2/9 w 2rb4g2s3n3l17p": {
+      "reply": "3g2f",
+      "next": "9/3S5/7N1/4B4/9/3S3k1/9/3L2P2/9 b 2rb4g2s3n3l17p"
+    },
+    "9/3S5/7N1/9/8S/3S5/6G2/3L4k/9 b P2r2b3gs3n3l17p": {
+      "attacks": {
+        "P*1i": "9/3S5/7N1/9/8S/3S5/6G2/3L4k/8P w 2r2b3gs3n3l17p"
+      }
+    },
+    "9/3S5/7N1/9/9/3S3S1/6G2/3L5/8k b 2r2b3gs3n3l18p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/9/3S2Bk1/9/3L2P2/9 b 2rb4g2s3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/5B3/3S3k1/9/3L2P2/9 b 2rb4g2s3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/4B4/9/3S3k1/9/3L2P2/9 b 2rb4g2s3n3l17p": {
+      "attacks": {}
+    },
+    "9/3S5/7N1/9/8S/3S5/6G2/3L4k/8P w 2r2b3gs3n3l17p": {
+      "reply": "1h1i",
+      "next": "9/3S5/7N1/9/8S/3S5/6G2/3L5/8k b 2r2b3gs3n3l18p"
+    },
+    "9/3S5/7N1/9/8S/3S5/6G2/3L5/8k b 2r2b3gs3n3l18p": {
+      "attacks": {}
+    }
+  },
+  "frontier": [],
+  "oracle_reports": {
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L4k/9 b Prb3gs3n3l16p": "nomate",
+    "9/3S5/7N1/7R1/6B1S/3S3+p1/6G2/3L4k/9 b Prb3gs3n3l16p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S3R1/5Gp2/3L5/8k b rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp2/3L5/7k1 b Prb3gs3n3l16p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b P2rb3gs3n3l16p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S4R/5Gp1b/3L5/8k b r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1R/3L4g/8k b Br2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4R/7k1 b BGr2gs3n3l17p": "mate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b BG2r2gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp1G/3L5/8k b B2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b B2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3G1/8k b B2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b B2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7Bk b G2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b G2r2gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4k/9 b G2rb2gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b B2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2rb2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L4G/7k1 b 2r2gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/7k1 b 2r3gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gp2/3L2B1k/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5GpB1/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S2B2/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/5BB1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/6B1S/3S5/5Gp2/3L3k1/9 b 2r3gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/5Gpk1/3L5/9 b 2rb3gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/8S/3S5/5GpBk/3L5/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/8S/3S2B2/5Gp1k/3L5/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/5B2S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/8S/3S5/5Gp1k/3L5/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/8S/3S5/5Gp1B/3L5/8k b 2r3gs3n3l17p": "nomate",
+    "1B7/3S5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/6B1S/3S5/6G2/3L4k/9 b P2rb3gs3n3l17p": "nomate",
+    "9/2BS5/7N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/9/3S3S1/5Gpk1/3L5/9 b 2r2b3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/9/3S2Bk1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": "nomate",
+    "9/3S5/7N1/9/5B3/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/9/3S3k1/5Gp2/3L5/9 b 2rb3g2s3n3l17p": "nomate",
+    "9/3S5/3B3N1/9/8S/3S5/5Gp2/3L3k1/9 b 2rb3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/8S/3S5/5Gpk1/3L5/9 b 2r2b3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/9/3S3S1/6G2/3L4k/9 b P2r2b3gs3n3l17p": "nomate",
+    "9/3S5/7N1/9/9/3S2B2/6k2/3L5/9 b P2rb4g2s3n3l17p": "nomate",
+    "9/3S5/7N1/9/5B3/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p": "nomate",
+    "9/3S5/7N1/4B4/9/3S5/6k2/3L5/9 b P2rb4g2s3n3l17p": "nomate",
+    "9/3S5/7N1/9/8S/3S5/6G2/3L4k/9 b P2r2b3gs3n3l17p": "nomate"
+  },
+  "cutoff": null,
+  "status": "independently_certified_nomate",
+  "engine_calls_this_run": 72,
+  "seconds": 0.465852883993648,
+  "unresolved_reply": null,
+  "record_goal_achieved": false,
+  "verification": {
+    "reachable_nodes": 207,
+    "edges": 246,
+    "black_no_checks_terminals": 25,
+    "closed": true,
+    "white_continuous_check_cycles_excluded": true,
+    "argument": "All attacks covered, legal defender strategy never reaches mate; finite closed cycles permit no forced finite mate."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "spatial-phase2-silver62-promote",
+  "first_plies": 164,
+  "second_plies": 108,
+  "total_plies": 272,
+  "validation": {
+    "valid": true,
+    "plies": 272,
+    "final": "9/3+S5/7N1/7R1/6B1S/3S3+p1/5G1k1/3L2p2/9 b rb3gs3n3l16p 313",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "forced_composition_proved": false,
+  "initial_nomate_proved": true,
+  "initial_nomate_certificate": "no-king-core-initial-nomate-graph.json",
+  "entry_initial_nomate_proved": true,
+  "entry_certificate": "004-nomate-certificate.json"
+}
