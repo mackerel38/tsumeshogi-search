@@ -1,0 +1,29 @@
+{
+  "name": "spatial-lance68-67",
+  "plies": 106,
+  "board_changes": [
+    {
+      "square": "6g",
+      "before": null,
+      "after": "L"
+    },
+    {
+      "square": "6h",
+      "before": "L",
+      "after": null
+    }
+  ],
+  "hands_and_turn_restored": true,
+  "path_validation": {
+    "valid": true,
+    "plies": 106,
+    "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/3L1Gpk1/9/9 b rb3gs3n3l16p 147",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "forced_transition_proved": false,
+  "optimal_transition_length_proved": false,
+  "tsume_rule_conformity_proved": false,
+  "actions_run": 38490649867
+}

@@ -1,0 +1,21 @@
+{
+  "initial": "9/9/9/9/9/4k4/9/4P4/3L1L3 b 2r2b4g4s4n2l17p 1",
+  "all_initial_checks": [
+    "5h5g"
+  ],
+  "refutation": [
+    "5h5g",
+    "5f5g"
+  ],
+  "validation": {
+    "valid": true,
+    "plies": 2,
+    "final": "9/9/9/9/9/9/4k4/9/3L1L3 b 2r2b4g4s4n2l18p 3",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "final_checks_both_libraries": [],
+  "initial_nomate_proved": true,
+  "initial_checking_coverage_both_libraries": true
+}

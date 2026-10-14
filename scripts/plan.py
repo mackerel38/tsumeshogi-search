@@ -1,7 +1,7 @@
 """Parse bounded declarative requests, never issue text as shell code."""
 import json,os,re
 from pathlib import Path
-ALLOWED=['horse-8a','horse-7b','horse-6c','horse-5d','horse-1d','horse-4f','no-king-core','spatial-pawn37-38','spatial-lance68-67','spatial-silver62-promote','spatial-pawn26-demote']
+ALLOWED=['horse-8a','horse-7b','horse-6c','horse-5d','horse-1d','horse-4f','no-king-core','spatial-pawn37-38','spatial-lance68-67','spatial-silver62-promote','spatial-pawn26-demote','spatial-phase2-pawn38-39promote','spatial-phase2-silver62-promote']
 def request(body):
     match=re.search(r'```json\s*(.*?)\s*```',body,re.S)
     value=json.loads(match.group(1) if match else body)

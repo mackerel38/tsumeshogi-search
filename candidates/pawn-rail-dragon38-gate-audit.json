@@ -1,0 +1,60 @@
+{
+  "initial": "9/9/9/9/9/4k4/9/4P1+R2/3L1L3 b r2b4g4s4n2l17p 1",
+  "line": [
+    "3h4g",
+    "5f5e",
+    "4g5g"
+  ],
+  "validation": {
+    "valid": true,
+    "plies": 3,
+    "final": "9/9/9/9/4k4/9/4+R4/4P4/3L1L3 w r2b4g4s4n2l17p 4",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "all_white_replies": [
+    "B*5f",
+    "G*5f",
+    "L*5f",
+    "N*5f",
+    "P*5f",
+    "R*5f",
+    "S*5f"
+  ],
+  "engine_report": "checkmate 3h4g 5f5e 4g4e",
+  "pv": [
+    "3h4g",
+    "5f5e",
+    "4g4e"
+  ],
+  "forced_gate_proved": false,
+  "independently_verified_shortcut": {
+    "line": [
+      "3h4g",
+      "5f5e",
+      "4g4e"
+    ],
+    "validation": {
+      "valid": true,
+      "plies": 3,
+      "final": "9/9/9/9/4k+R3/9/9/4P4/3L1L3 w r2b4g4s4n2l17p 4",
+      "mate": true,
+      "maximum_occurrences": 1,
+      "returns": []
+    },
+    "white_coverage": [
+      {
+        "ply": 1,
+        "replies": [
+          "5f5e"
+        ]
+      },
+      {
+        "ply": 3,
+        "replies": []
+      }
+    ],
+    "mate_upper_bound": 3
+  }
+}

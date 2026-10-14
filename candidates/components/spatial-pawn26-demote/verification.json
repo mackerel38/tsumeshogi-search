@@ -1,0 +1,24 @@
+{
+  "name": "spatial-pawn26-demote",
+  "plies": 122,
+  "board_changes": [
+    {
+      "square": "2f",
+      "before": "+p",
+      "after": "p"
+    }
+  ],
+  "hands_and_turn_restored": true,
+  "path_validation": {
+    "valid": true,
+    "plies": 122,
+    "final": "9/3S5/7N1/7R1/6B1S/3S3p1/5Gpk1/3L5/9 b rb3gs3n3l16p 163",
+    "mate": false,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "forced_transition_proved": false,
+  "optimal_transition_length_proved": false,
+  "tsume_rule_conformity_proved": false,
+  "actions_run": 38490649867
+}
