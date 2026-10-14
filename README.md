@@ -38,3 +38,5 @@ python scripts/run_search.py --candidate horse-5d --seconds 5 --nodes 10000 --ou
 `candidates/007-pawn-lance-rail-step.sfen` は盤上5枚、自玉なし。左右の香で通路を作り、後方の香で歩を守る。歩と玉が一段ずつ進む最短11手を、9手以内の詰みがない証明と11手以内の詰みがある証明で確認した。全王手と必要な玉方応手を両ライブラリで照合する。これは長手数作品の完成ではなく、内側の処理に接続する前の位置送り部品。
 
 再現：`python research/bounded_mate_component.py`。証拠：`candidates/007-exact11-proof.json`。無駄合に依存しない玉の逃げで9手以内の詰みを否定し、歩の接触王手で11手以内の詰みを証明する。反復はない。全余詰の検査は未完了。
+
+空間・駒種変換の実験候補：`spatial-pawn37-38`, `spatial-lance68-67`, `spatial-silver62-promote`, `spatial-pawn26-demote`。各候補の `-target.json` は、持駒を変えず盤面の一箇所だけを変える出口条件。選択経路・強制とも未成立。
