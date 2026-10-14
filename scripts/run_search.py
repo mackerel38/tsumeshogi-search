@@ -12,7 +12,7 @@ if args.resume:
         assert len(matches)<=1, 'Ambiguous checkpoint'
         if matches:shutil.copyfile(matches[0],Path('research')/(stem+suffix))
 command=['python','research/royal_latent_return.py','--source',f'candidates/{tag}.json','--tag',tag,'--all-pieces','--seconds',str(args.seconds),'--nodes',str(args.nodes)]
-if tag=='horse-5d':command+=['--goal-source','candidates/horse-5d-completions.json','--completion-distance']
+if tag in ['horse-5d','no-king-core']:command+=['--goal-source',f'candidates/{tag}-completions.json','--completion-distance']
 started=time.time();result=subprocess.run(command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
 (args.output/'log.txt').write_text(result.stdout)
 for suffix in ['.json','.json.gz']:

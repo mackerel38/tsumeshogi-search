@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "predecessor": "9/3S5/7N1/6R2/6B1S/3S4+p/5Gpk1/3L5/9 b Prb3gs3n3l15p 41",
+      "suffix": [
+        "3d2d",
+        "1f2f"
+      ],
+      "validation": {
+        "valid": true,
+        "plies": 2,
+        "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b Prb3gs3n3l15p 43",
+        "mate": false,
+        "maximum_occurrences": 1,
+        "returns": []
+      }
+    },
+    {
+      "predecessor": "9/3S5/7N1/6R2/6B1S/3S2+p2/5Gpk1/3L5/9 b Prb3gs3n3l15p 41",
+      "suffix": [
+        "3d2d",
+        "3f2f"
+      ],
+      "validation": {
+        "valid": true,
+        "plies": 2,
+        "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b Prb3gs3n3l15p 43",
+        "mate": false,
+        "maximum_occurrences": 1,
+        "returns": []
+      }
+    },
+    {
+      "predecessor": "9/3S5/7N1/5R3/6B1S/3S4+p/5Gpk1/3L5/9 b Prb3gs3n3l15p 41",
+      "suffix": [
+        "4d2d",
+        "1f2f"
+      ],
+      "validation": {
+        "valid": true,
+        "plies": 2,
+        "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b Prb3gs3n3l15p 43",
+        "mate": false,
+        "maximum_occurrences": 1,
+        "returns": []
+      }
+    },
+    {
+      "predecessor": "9/3S5/7N1/5R3/6B1S/3S2+p2/5Gpk1/3L5/9 b Prb3gs3n3l15p 41",
+      "suffix": [
+        "4d2d",
+        "3f2f"
+      ],
+      "validation": {
+        "valid": true,
+        "plies": 2,
+        "final": "9/3S5/7N1/7R1/6B1S/3S3+p1/5Gpk1/3L5/9 b Prb3gs3n3l15p 43",
+        "mate": false,
+        "maximum_occurrences": 1,
+        "returns": []
+      }
+    }
+  ]
+}

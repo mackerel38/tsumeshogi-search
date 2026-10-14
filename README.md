@@ -14,7 +14,7 @@ Actionsの `Parallel restoration search` を手動実行するか、タイトル
 {"candidates":["horse-5d","horse-6c"],"seconds":60,"nodes":200000}
 ```
 
-候補：`horse-8a`, `horse-7b`, `horse-6c`, `horse-5d`, `horse-1d`, `horse-4f`。Issueからの実行はOWNER/MEMBER/COLLABORATORに限定。秒数1〜600、追加局面数10〜1000000。Issue本文はJSON条件としてのみ読み、コードとして実行しません。
+候補：`horse-8a`, `horse-7b`, `horse-6c`, `horse-5d`, `horse-1d`, `horse-4f`, `no-king-core`。Issueからの実行はOWNER/MEMBER/COLLABORATORに限定。秒数1〜600、追加局面数10〜1000000。Issue本文はJSON条件としてのみ読み、コードとして実行しません。
 
 結果・圧縮チェックポイント・ログ・コミット/run番号は候補別Artifactsに30日保存します。時間・局面数の打切りはUNKNOWNであり、不成立の証明ではありません。
 
@@ -30,3 +30,5 @@ python scripts/run_search.py --candidate horse-5d --seconds 5 --nodes 10000 --ou
 ```
 
 候補003のSFENは `candidates/003-horse54-latent-check.sfen`。将棋ライブラリは固定バージョン、元の2.2GB研究ログは含めていません。
+
+自玉なしの新しい核は `candidates/004-no-king-transfer-core.sfen`。馬と自玉を外しても86手の選択経路は成立するが、詰みと強制は未証明。
