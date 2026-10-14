@@ -1,0 +1,272 @@
+{
+  "initial": "8k/7p1/5g2N/4B1+B2/5N3/9/9/9/9 b 2r3g4s2n4l17p 1",
+  "upper_bound": 7,
+  "strategy": {
+    "sfen": "8k/7p1/5g2N/4B1+B2/5N3/9/9/9/9 b 2r3g4s2n4l17p 1",
+    "move": "1c2a+",
+    "next": {
+      "sfen": "7+Nk/7p1/5g3/4B1+B2/5N3/9/9/9/9 w 2r3g4s2n4l17p 2",
+      "defenses": [
+        {
+          "move": "1a2a",
+          "next": {
+            "sfen": "7k1/7p1/5g3/4B1+B2/5N3/9/9/9/9 b 2r3g4s3n4l17p 3",
+            "move": "5d4c+",
+            "next": {
+              "sfen": "7k1/7p1/5+B3/6+B2/5N3/9/9/9/9 w G2r3g4s3n4l17p 4",
+              "defenses": [
+                {
+                  "move": "2a3a",
+                  "next": {
+                    "sfen": "6k2/7p1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g4s3n4l17p 5",
+                    "move": "G*3b",
+                    "next": {
+                      "sfen": "6k2/6Gp1/5+B3/6+B2/5N3/9/9/9/9 w 2r3g4s3n4l17p 6",
+                      "mate": true,
+                      "black_hand_empty": true
+                    }
+                  }
+                },
+                {
+                  "move": "2a1a",
+                  "next": {
+                    "sfen": "8k/7p1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g4s3n4l17p 5",
+                    "move": "G*1b",
+                    "next": {
+                      "sfen": "8k/7pG/5+B3/6+B2/5N3/9/9/9/9 w 2r3g4s3n4l17p 6",
+                      "mate": true,
+                      "black_hand_empty": true
+                    }
+                  }
+                },
+                {
+                  "move": "P*3b",
+                  "next": {
+                    "sfen": "7k1/6pp1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g4s3n4l16p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6pp1/5+BN2/6+B2/9/9/9/9/9 w G2r3g4s3n4l16p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6pp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s3n4l16p 7",
+                            "move": "G*2a",
+                            "next": {
+                              "sfen": "6kG1/6pp1/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s3n4l16p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6pp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s3n4l16p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6ppG/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s3n4l16p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "move": "L*3b",
+                  "next": {
+                    "sfen": "7k1/6lp1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g4s3n3l17p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6lp1/5+BN2/6+B2/9/9/9/9/9 w G2r3g4s3n3l17p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6lp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s3n3l17p 7",
+                            "move": "G*2a",
+                            "next": {
+                              "sfen": "6kG1/6lp1/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s3n3l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6lp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s3n3l17p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6lpG/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s3n3l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "move": "N*3b",
+                  "next": {
+                    "sfen": "7k1/6np1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g4s2n4l17p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6np1/5+BN2/6+B2/9/9/9/9/9 w G2r3g4s2n4l17p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6np1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s2n4l17p 7",
+                            "move": "G*2a",
+                            "next": {
+                              "sfen": "6kG1/6np1/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s2n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6np1/5+BN2/6+B2/9/9/9/9/9 b G2r3g4s2n4l17p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6npG/5+BN2/6+B2/9/9/9/9/9 w 2r3g4s2n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "move": "S*3b",
+                  "next": {
+                    "sfen": "7k1/6sp1/5+B3/6+B2/5N3/9/9/9/9 b G2r3g3s3n4l17p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6sp1/5+BN2/6+B2/9/9/9/9/9 w G2r3g3s3n4l17p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6sp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g3s3n4l17p 7",
+                            "move": "G*4b",
+                            "next": {
+                              "sfen": "6k2/5Gsp1/5+BN2/6+B2/9/9/9/9/9 w 2r3g3s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6sp1/5+BN2/6+B2/9/9/9/9/9 b G2r3g3s3n4l17p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6spG/5+BN2/6+B2/9/9/9/9/9 w 2r3g3s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "move": "G*3b",
+                  "next": {
+                    "sfen": "7k1/6gp1/5+B3/6+B2/5N3/9/9/9/9 b G2r2g4s3n4l17p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6gp1/5+BN2/6+B2/9/9/9/9/9 w G2r2g4s3n4l17p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6gp1/5+BN2/6+B2/9/9/9/9/9 b G2r2g4s3n4l17p 7",
+                            "move": "G*2a",
+                            "next": {
+                              "sfen": "6kG1/6gp1/5+BN2/6+B2/9/9/9/9/9 w 2r2g4s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6gp1/5+BN2/6+B2/9/9/9/9/9 b G2r2g4s3n4l17p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6gpG/5+BN2/6+B2/9/9/9/9/9 w 2r2g4s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "move": "R*3b",
+                  "next": {
+                    "sfen": "7k1/6rp1/5+B3/6+B2/5N3/9/9/9/9 b Gr3g4s3n4l17p 5",
+                    "move": "4e3c",
+                    "next": {
+                      "sfen": "7k1/6rp1/5+BN2/6+B2/9/9/9/9/9 w Gr3g4s3n4l17p 6",
+                      "defenses": [
+                        {
+                          "move": "2a3a",
+                          "next": {
+                            "sfen": "6k2/6rp1/5+BN2/6+B2/9/9/9/9/9 b Gr3g4s3n4l17p 7",
+                            "move": "G*2a",
+                            "next": {
+                              "sfen": "6kG1/6rp1/5+BN2/6+B2/9/9/9/9/9 w r3g4s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        },
+                        {
+                          "move": "2a1a",
+                          "next": {
+                            "sfen": "8k/6rp1/5+BN2/6+B2/9/9/9/9/9 b Gr3g4s3n4l17p 7",
+                            "move": "G*1b",
+                            "next": {
+                              "sfen": "8k/6rpG/5+BN2/6+B2/9/9/9/9/9 w r3g4s3n4l17p 8",
+                              "mate": true,
+                              "black_hand_empty": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "mating_leaves": 14,
+  "hand_empty_leaves": 14,
+  "history_audit": {
+    "leaves": 14,
+    "visits": 44,
+    "maximum_occurrences": 1
+  }
+}

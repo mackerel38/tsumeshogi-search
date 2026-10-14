@@ -1,0 +1,16 @@
+[
+  {
+    "state": "7k1/7p1/5+B3/6+B2/5N3/9/9/9/9 w G2r3g4s3n4l17p",
+    "drop": "P*3b",
+    "checking_capture": "4c3b",
+    "king_recapture": "2a3b",
+    "after": "9/6kp1/9/6+B2/5N3/9/9/9/9 b GP2rb3g4s3n4l16p 4"
+  },
+  {
+    "state": "7k1/7p1/5B3/6+B2/5N3/9/9/9/9 w G2r3g4s3n4l17p",
+    "drop": "P*3b",
+    "checking_capture": "4c3b",
+    "king_recapture": "2a3b",
+    "after": "9/6kp1/9/6+B2/5N3/9/9/9/9 b GP2rb3g4s3n4l16p 4"
+  }
+]
