@@ -3,13 +3,14 @@ import json,sys
 from pathlib import Path
 from collections import Counter
 import shogi,cshogi as cs
+from orthodox_legal import legal_moves
 def state(b):return ' '.join(b.sfen().split()[:3])
 def pair(sfen):
     b=shogi.Board(sfen);n=cs.Board(sfen)
-    assert {m.usi() for m in b.legal_moves}=={cs.move_to_usi(m) for m in n.legal_moves}
+    assert {m.usi() for m in legal_moves(b)}=={cs.move_to_usi(m) for m in n.legal_moves}
     return b,n
 def push(b,n,u):
-    assert u in {m.usi() for m in b.legal_moves}
+    assert u in {m.usi() for m in legal_moves(b)}
     assert u in {cs.move_to_usi(m) for m in n.legal_moves}
     b.push_usi(u);n.push_usi(u);assert b.sfen()==n.sfen()
 def main(folder):
@@ -27,14 +28,14 @@ def main(folder):
         assert remaining>=0
         b,n=pair(node['sfen']);k=state(b);history=history.copy();history[k]+=1;assert history[k]<4
         if node.get('mate'):
-            assert b.turn==shogi.WHITE and b.is_check() and n.is_check() and not list(b.legal_moves) and not list(n.legal_moves)
+            assert b.turn==shogi.WHITE and b.is_check() and n.is_check() and not list(legal_moves(b)) and not list(n.legal_moves)
             empty=not b.pieces_in_hand[0];assert empty==node['black_hand_empty'];leaves.append(empty);return
         assert remaining>0
         if b.turn==shogi.BLACK:
             push(b,n,node['move']);assert b.is_check() and b.sfen()==node['next']['sfen']
             positive_walk(node['next'],remaining-1,history)
         else:
-            legal={m.usi() for m in b.legal_moves};assert legal=={r['move'] for r in node['defenses']} and len(legal)==len(node['defenses'])
+            legal={m.usi() for m in legal_moves(b)};assert legal=={r['move'] for r in node['defenses']} and len(legal)==len(node['defenses'])
             for r in node['defenses']:
                 q,t=pair(node['sfen']);push(q,t,r['move']);assert q.sfen()==r['next']['sfen']
                 positive_walk(r['next'],remaining-1,history)
@@ -45,11 +46,11 @@ def main(folder):
         if i in seen:return
         row=nodes[i];b,n=pair(row['state']+' 1');depth=row['depth']
         if row.get('horizon'):
-            assert depth==0 and (b.turn==shogi.BLACK or list(b.legal_moves));seen.add(i);return
+            assert depth==0 and (b.turn==shogi.BLACK or list(legal_moves(b)));seen.add(i);return
         children=row['children'];actual={r['move'] for r in children}
         if b.turn==shogi.BLACK:
             wanted=set()
-            for m in list(b.legal_moves):
+            for m in list(legal_moves(b)):
                 b.push(m)
                 if b.is_check():wanted.add(m.usi())
                 b.pop()

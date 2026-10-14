@@ -3,19 +3,20 @@ import json,sys
 from pathlib import Path
 import shogi,cshogi as cs
 from verify_nomate import verify
+from orthodox_legal import legal_moves
 
 def legal_pair(b,n):
     assert b.sfen()==n.sfen()
-    assert {m.usi() for m in b.legal_moves}=={cs.move_to_usi(m) for m in n.legal_moves}
+    assert {m.usi() for m in legal_moves(b)}=={cs.move_to_usi(m) for m in n.legal_moves}
 
 def main(folder):
     contract=json.loads((folder/'contract.json').read_text())
     b=shogi.Board(contract['initial']);n=cs.Board(b.sfen());legal_pair(b,n)
     assert not b.is_check() and b.pieces_in_hand[shogi.BLACK]=={shogi.GOLD:1}
     found={}
-    for m in list(b.legal_moves):
+    for m in list(legal_moves(b)):
         u=m.usi();b.push(m);n.push_usi(u)
-        if b.is_check() and not list(b.legal_moves):
+        if b.is_check() and not list(legal_moves(b)):
             legal_pair(b,n);assert n.is_check() and not b.pieces_in_hand[shogi.BLACK]
             found[u]=b.sfen()
         b.pop();n.pop()
@@ -40,7 +41,7 @@ def main(folder):
                 assert row['reply']=='2b2c'
                 q=cs.Board(p.sfen())
                 for token in [row['reply'],'3d2c','1b2c']:
-                    legal_pair(p,q);assert token in {x.usi() for x in p.legal_moves}
+                    legal_pair(p,q);assert token in {x.usi() for x in legal_moves(p)}
                     p.push_usi(token);q.push_usi(token)
                 assert p.sfen()==q.sfen()
         results.append(dict(certificate=name,verification=stats))

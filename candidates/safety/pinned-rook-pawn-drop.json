@@ -1,0 +1,10 @@
+{
+  "state": "6+N1k/7r1/9/5+B1N1/9/9/9/9/9 b 2Prb4g4s2n4l16p",
+  "python_only": [
+    "P*1b"
+  ],
+  "native_only": [],
+  "after_illegal_pawn_drop": "6+N1k/7rP/9/5+B1N1/9/9/9/9/9 w Prb4g4s2n4l16p 2",
+  "defender_board_evasions": [],
+  "corrected_sets_agree": true
+}

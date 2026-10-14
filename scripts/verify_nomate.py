@@ -3,6 +3,7 @@ import json,sys
 from pathlib import Path
 from collections import deque
 import shogi,cshogi as cs
+from orthodox_legal import legal_moves
 def key(b): return " ".join(b.sfen().split()[:3])
 def verify(initial, nodes):
     root = key(cs.Board(initial))
@@ -20,11 +21,11 @@ def verify(initial, nodes):
         node = nodes[state]
         b = shogi.Board(state+' 1')
         native = cs.Board(state+' 1')
-        legal = {m.usi() for m in b.legal_moves}
+        legal = {m.usi() for m in legal_moves(b)}
         assert legal == {cs.move_to_usi(m) for m in native.legal_moves}
         if b.turn == shogi.BLACK:
             wanted = set()
-            for move in list(b.legal_moves):
+            for move in list(legal_moves(b)):
                 b.push(move)
                 if b.is_check():
                     wanted.add(move.usi())
