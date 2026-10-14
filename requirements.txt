@@ -1,0 +1,2 @@
+python-shogi==1.1.1
+cshogi==1.0.9
