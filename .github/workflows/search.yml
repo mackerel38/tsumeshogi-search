@@ -46,8 +46,6 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.name.outputs.image }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
   search:
     needs: [plan, image]
     runs-on: ubuntu-latest
