@@ -1,0 +1,77 @@
+{
+  "initial": "9/9/9/9/9/4k4/9/4P4/3LLL3 b 2r2b4g4s4nl17p 1",
+  "line": [
+    "5h5g",
+    "5f5e",
+    "5g5f",
+    "5e5d",
+    "5f5e",
+    "5d5c",
+    "5e5d",
+    "5c5b",
+    "5d5c",
+    "5b5a",
+    "5c5b"
+  ],
+  "validation": {
+    "valid": true,
+    "plies": 11,
+    "final": "4k4/4P4/9/9/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p 12",
+    "mate": true,
+    "maximum_occurrences": 1,
+    "returns": []
+  },
+  "defender_coverage": [
+    {
+      "ply": 1,
+      "replies": [
+        "5f5e"
+      ]
+    },
+    {
+      "ply": 3,
+      "replies": [
+        "5e5d"
+      ]
+    },
+    {
+      "ply": 5,
+      "replies": [
+        "5d5c"
+      ]
+    },
+    {
+      "ply": 7,
+      "replies": [
+        "5c5b"
+      ]
+    },
+    {
+      "ply": 9,
+      "replies": [
+        "5b5a"
+      ]
+    },
+    {
+      "ply": 11,
+      "replies": []
+    }
+  ],
+  "engine_selected_pv": [
+    "5h5g",
+    "5f5e",
+    "5g5f",
+    "5e5d",
+    "5f5e",
+    "5d5c",
+    "5e5d",
+    "5c5b",
+    "5d5c+",
+    "5b5a",
+    "4i4b+"
+  ],
+  "engine_report": "checkmate 5h5g 5f5e 5g5f 5e5d 5f5e 5d5c 5e5d 5c5b 5d5c+ 5b5a 4i4b+",
+  "mate_upper_bound": 11,
+  "optimal_mate_length_unproved": true,
+  "forced_pawn_route": true
+}

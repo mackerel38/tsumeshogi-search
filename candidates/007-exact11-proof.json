@@ -1,0 +1,283 @@
+{
+  "initial": "9/9/9/9/9/4k4/9/4P4/3LLL3 b 2r2b4g4s4nl17p 1",
+  "results": [
+    {
+      "depth": 9,
+      "mate_within": false,
+      "verified_visits": 19,
+      "strategy": {
+        "state": "9/9/9/9/9/4k4/9/4P4/3LLL3 b 2r2b4g4s4nl17p",
+        "depth": 9,
+        "children": [
+          {
+            "move": "5h5g",
+            "next": {
+              "state": "9/9/9/9/9/4k4/4P4/9/3LLL3 w 2r2b4g4s4nl17p",
+              "depth": 8,
+              "children": [
+                {
+                  "move": "5f5e",
+                  "next": {
+                    "state": "9/9/9/9/4k4/9/4P4/9/3LLL3 b 2r2b4g4s4nl17p",
+                    "depth": 7,
+                    "children": [
+                      {
+                        "move": "5g5f",
+                        "next": {
+                          "state": "9/9/9/9/4k4/4P4/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                          "depth": 6,
+                          "children": [
+                            {
+                              "move": "5e5d",
+                              "next": {
+                                "state": "9/9/9/4k4/9/4P4/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                "depth": 5,
+                                "children": [
+                                  {
+                                    "move": "5f5e",
+                                    "next": {
+                                      "state": "9/9/9/4k4/4P4/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                      "depth": 4,
+                                      "children": [
+                                        {
+                                          "move": "5d5c",
+                                          "next": {
+                                            "state": "9/9/4k4/9/4P4/9/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                            "depth": 3,
+                                            "children": [
+                                              {
+                                                "move": "5e5d",
+                                                "next": {
+                                                  "state": "9/9/4k4/4P4/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                                  "depth": 2,
+                                                  "children": [
+                                                    {
+                                                      "move": "5c5b",
+                                                      "next": {
+                                                        "state": "9/4k4/9/4P4/9/9/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                                        "depth": 1,
+                                                        "children": [
+                                                          {
+                                                            "move": "5d5c+",
+                                                            "next": {
+                                                              "state": "9/4k4/4+P4/9/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          },
+                                                          {
+                                                            "move": "5d5c",
+                                                            "next": {
+                                                              "state": "9/4k4/4P4/9/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          },
+                                                          {
+                                                            "move": "4i4b+",
+                                                            "next": {
+                                                              "state": "9/4k+L3/9/4P4/9/9/9/9/3LL4 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          },
+                                                          {
+                                                            "move": "4i4c+",
+                                                            "next": {
+                                                              "state": "9/4k4/5+L3/4P4/9/9/9/9/3LL4 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          },
+                                                          {
+                                                            "move": "6i6b+",
+                                                            "next": {
+                                                              "state": "9/3+Lk4/9/4P4/9/9/9/9/4LL3 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          },
+                                                          {
+                                                            "move": "6i6c+",
+                                                            "next": {
+                                                              "state": "9/4k4/3+L5/4P4/9/9/9/9/4LL3 w 2r2b4g4s4nl17p",
+                                                              "depth": 0,
+                                                              "horizon": true
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "move": "4i4c+",
+                                                "next": {
+                                                  "state": "9/9/4k+L3/9/4P4/9/9/9/3LL4 w 2r2b4g4s4nl17p",
+                                                  "depth": 2,
+                                                  "children": [
+                                                    {
+                                                      "move": "5c4c",
+                                                      "next": {
+                                                        "state": "9/9/5k3/9/4P4/9/9/9/3LL4 b 2r2b4g4s4n2l17p",
+                                                        "depth": 1,
+                                                        "children": []
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "move": "6i6c+",
+                                                "next": {
+                                                  "state": "9/9/3+Lk4/9/4P4/9/9/9/4LL3 w 2r2b4g4s4nl17p",
+                                                  "depth": 2,
+                                                  "children": [
+                                                    {
+                                                      "move": "5c6c",
+                                                      "next": {
+                                                        "state": "9/9/3k5/9/4P4/9/9/9/4LL3 b 2r2b4g4s4n2l17p",
+                                                        "depth": 1,
+                                                        "children": []
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "depth": 11,
+      "mate_within": true,
+      "verified_visits": 12,
+      "strategy": {
+        "state": "9/9/9/9/9/4k4/9/4P4/3LLL3 b 2r2b4g4s4nl17p",
+        "depth": 11,
+        "children": [
+          {
+            "move": "5h5g",
+            "next": {
+              "state": "9/9/9/9/9/4k4/4P4/9/3LLL3 w 2r2b4g4s4nl17p",
+              "depth": 10,
+              "children": [
+                {
+                  "move": "5f5e",
+                  "next": {
+                    "state": "9/9/9/9/4k4/9/4P4/9/3LLL3 b 2r2b4g4s4nl17p",
+                    "depth": 9,
+                    "children": [
+                      {
+                        "move": "5g5f",
+                        "next": {
+                          "state": "9/9/9/9/4k4/4P4/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                          "depth": 8,
+                          "children": [
+                            {
+                              "move": "5e5d",
+                              "next": {
+                                "state": "9/9/9/4k4/9/4P4/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                "depth": 7,
+                                "children": [
+                                  {
+                                    "move": "5f5e",
+                                    "next": {
+                                      "state": "9/9/9/4k4/4P4/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                      "depth": 6,
+                                      "children": [
+                                        {
+                                          "move": "5d5c",
+                                          "next": {
+                                            "state": "9/9/4k4/9/4P4/9/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                            "depth": 5,
+                                            "children": [
+                                              {
+                                                "move": "5e5d",
+                                                "next": {
+                                                  "state": "9/9/4k4/4P4/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                                  "depth": 4,
+                                                  "children": [
+                                                    {
+                                                      "move": "5c5b",
+                                                      "next": {
+                                                        "state": "9/4k4/9/4P4/9/9/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                                        "depth": 3,
+                                                        "children": [
+                                                          {
+                                                            "move": "5d5c+",
+                                                            "next": {
+                                                              "state": "9/4k4/4+P4/9/9/9/9/9/3LLL3 w 2r2b4g4s4nl17p",
+                                                              "depth": 2,
+                                                              "children": [
+                                                                {
+                                                                  "move": "5b5a",
+                                                                  "next": {
+                                                                    "state": "4k4/9/4+P4/9/9/9/9/9/3LLL3 b 2r2b4g4s4nl17p",
+                                                                    "depth": 1,
+                                                                    "children": [
+                                                                      {
+                                                                        "move": "4i4b+",
+                                                                        "next": {
+                                                                          "state": "4k4/5+L3/4+P4/9/9/9/9/9/3LL4 w 2r2b4g4s4nl17p",
+                                                                          "depth": 0,
+                                                                          "mate": true
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "exact_mate_plies": 11,
+  "independent_dual_verification": true,
+  "negative_white_replies_all_king_moves": true,
+  "composition_uniqueness_unproved": true
+}
