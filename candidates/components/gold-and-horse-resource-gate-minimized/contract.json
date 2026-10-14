@@ -1,0 +1,21 @@
+{
+  "initial": "8k/7p1/7+B1/9/9/9/9/9/9 b G2rb3g4s4n4l17p 1",
+  "exit_moves": [
+    {
+      "move": "G*1b",
+      "final": "8k/7pG/7+B1/9/9/9/9/9/9 w 2rb3g4s4n4l17p 2",
+      "attacker_hand_empty": true
+    }
+  ],
+  "resource_required": "Gold1",
+  "board_return_required": "Horse23 versus tested Horse24",
+  "positive_shortest_plies": 1,
+  "negative_scope": "Exact published entry SFENs; no defender drops needed",
+  "forced_controller_and_record_unproved": true,
+  "composition_unique_unproved": true,
+  "negative_certificates": [
+    "gold0-nomate.json",
+    "horse24-gold1-nomate.json"
+  ],
+  "removed_piece_from009": "BlackKnight13 returned to defender hand"
+}

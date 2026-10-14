@@ -1,0 +1,54 @@
+{
+  "scope": "Build a finite closed defender strategy graph, then independently verify it.\n\nEvery Black checking move must remain in the graph. White selects one legal\nreply. No White mating terminal is admitted. Finite closed cycles cannot prove\na forced finite mate, so cycles are valid NoMate evidence (unlike mate proofs).\nEngine NoMate reports guide White choices only and are never proof leaves.\n",
+  "initial": "8k/7p1/7+B1/9/9/9/9/9/9 b 2rb4g4s4n4l17p 1",
+  "nodes": {
+    "8k/7p1/7+B1/9/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2c1b": "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2c2b": "8k/7+B1/9/9/9/9/9/9/9 w P2rb4g4s4n4l17p"
+      }
+    },
+    "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1a1b",
+      "next": "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "8k/7+B1/9/9/9/9/9/9/9 w P2rb4g4s4n4l17p": {
+      "reply": "1a2b",
+      "next": "9/7k1/9/9/9/9/9/9/9 b P2r2b4g4s4n4l17p"
+    },
+    "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/7k1/9/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": {
+      "attacks": {
+        "P*2c": "9/7k1/7P1/9/9/9/9/9/9 w 2r2b4g4s4n4l17p"
+      }
+    },
+    "9/7k1/7P1/9/9/9/9/9/9 w 2r2b4g4s4n4l17p": {
+      "reply": "2b2c",
+      "next": "9/9/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "9/9/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    }
+  },
+  "frontier": [],
+  "oracle_reports": {
+    "9/7k1/9/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": "nomate"
+  },
+  "cutoff": null,
+  "status": "independently_certified_nomate",
+  "engine_calls_this_run": 1,
+  "seconds": 0.34018375399955403,
+  "unresolved_reply": null,
+  "record_goal_achieved": false,
+  "verification": {
+    "reachable_nodes": 7,
+    "edges": 6,
+    "black_no_checks_terminals": 2,
+    "closed": true,
+    "white_continuous_check_cycles_excluded": true,
+    "argument": "All attacks covered, legal defender strategy never reaches mate; finite closed cycles permit no forced finite mate."
+  },
+  "defender_board_only": true
+}

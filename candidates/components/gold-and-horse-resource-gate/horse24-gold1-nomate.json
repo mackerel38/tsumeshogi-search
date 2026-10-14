@@ -1,0 +1,590 @@
+{
+  "scope": "Build a finite closed defender strategy graph, then independently verify it.\n\nEvery Black checking move must remain in the graph. White selects one legal\nreply. No White mating terminal is admitted. Finite closed cycles cannot prove\na forced finite mate, so cycles are valid NoMate evidence (unlike mate proofs).\nEngine NoMate reports guide White choices only and are never proof leaves.\n",
+  "initial": "8k/7p1/8N/7+B1/9/9/9/9/9 b G2rb3g4s3n4l17p 1",
+  "nodes": {
+    "8k/7p1/8N/7+B1/9/9/9/9/9 b G2rb3g4s3n4l17p": {
+      "attacks": {
+        "G*2a": "7Gk/7p1/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "G*1b": "8k/7pG/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "1c2a+": "7+Nk/7p1/9/7+B1/9/9/9/9/9 w G2rb3g4s3n4l17p"
+      }
+    },
+    "7Gk/7p1/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1a1b",
+      "next": "7G1/7pk/8N/7+B1/9/9/9/9/9 b 2rb3g4s3n4l17p"
+    },
+    "8k/7pG/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1a1b",
+      "next": "9/7pk/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7+Nk/7p1/9/7+B1/9/9/9/9/9 w G2rb3g4s3n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/7p1/9/7+B1/9/9/9/9/9 b G2rb3g4s4n4l17p"
+    },
+    "7G1/7pk/8N/7+B1/9/9/9/9/9 b 2rb3g4s3n4l17p": {
+      "attacks": {
+        "2a1a": "8G/7pk/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "2a2b": "9/7Gk/8N/7+B1/9/9/9/9/9 w P2rb3g4s3n4l17p",
+        "2d2c": "7G1/7pk/7+BN/9/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "2d3d": "7G1/7pk/8N/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p"
+      }
+    },
+    "9/7pk/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "2d2c": "9/7pk/7+BN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "2d3d": "9/7pk/8N/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "7k1/7p1/9/7+B1/9/9/9/9/9 b G2rb3g4s4n4l17p": {
+      "attacks": {
+        "G*1a": "7kG/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p",
+        "G*3a": "6Gk1/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p",
+        "G*1b": "7k1/7pG/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p",
+        "G*3b": "7k1/6Gp1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p"
+      }
+    },
+    "8G/7pk/8N/7+B1/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1b1a",
+      "next": "8k/7p1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "9/7Gk/8N/7+B1/9/9/9/9/9 w P2rb3g4s3n4l17p": {
+      "reply": "1b2b",
+      "next": "9/7k1/8N/7+B1/9/9/9/9/9 b P2rb4g4s3n4l17p"
+    },
+    "7G1/7pk/7+BN/9/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1b2c",
+      "next": "7G1/7p1/7kN/9/9/9/9/9/9 b 2r2b3g4s3n4l17p"
+    },
+    "7G1/7pk/8N/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "2b2c",
+      "next": "7G1/8k/7pN/6+B2/9/9/9/9/9 b 2rb3g4s3n4l17p"
+    },
+    "9/7pk/7+BN/9/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1b2c",
+      "next": "9/7p1/7kN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p"
+    },
+    "9/7pk/8N/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "2b2c",
+      "next": "9/8k/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7kG/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "2a1a",
+      "next": "8k/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "6Gk1/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "2a3a",
+      "next": "6k2/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "7k1/7pG/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "2a1b",
+      "next": "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "7k1/6Gp1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "2a1a",
+      "next": "8k/6Gp1/9/7+B1/9/9/9/9/9 b 2rb3g4s4n4l17p"
+    },
+    "8k/7p1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "1c2a+": "7+Nk/7p1/9/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "9/7k1/8N/7+B1/9/9/9/9/9 b P2rb4g4s3n4l17p": {
+      "attacks": {
+        "P*2c": "9/7k1/7PN/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "1c2a+": "7+N1/7k1/9/7+B1/9/9/9/9/9 w P2rb4g4s3n4l17p",
+        "2d2c": "9/7k1/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p",
+        "2d3c": "9/7k1/6+B1N/9/9/9/9/9/9 w P2rb4g4s3n4l17p"
+      }
+    },
+    "7G1/7p1/7kN/9/9/9/9/9/9 b 2r2b3g4s3n4l17p": {
+      "attacks": {
+        "2a2b": "9/7G1/7kN/9/9/9/9/9/9 w P2r2b3g4s3n4l17p"
+      }
+    },
+    "7G1/8k/7pN/6+B2/9/9/9/9/9 b 2rb3g4s3n4l17p": {
+      "attacks": {
+        "2a1a": "8G/8k/7pN/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "2a2b": "9/7Gk/7pN/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p",
+        "3d2c": "7G1/8k/7+BN/9/9/9/9/9/9 w P2rb3g4s3n4l17p"
+      }
+    },
+    "9/7p1/7kN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p": {
+      "attacks": {}
+    },
+    "9/8k/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "3d2c": "9/8k/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p"
+      }
+    },
+    "8k/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "6k2/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2d4b": "6k2/5+B1p1/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2d1c": "9/7pk/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d2c": "9/7pk/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d3d": "9/7pk/9/6+B2/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "8k/6Gp1/9/7+B1/9/9/9/9/9 b 2rb3g4s4n4l17p": {
+      "attacks": {
+        "3b2a": "7Gk/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p",
+        "3b2b": "8k/7G1/9/7+B1/9/9/9/9/9 w P2rb3g4s4n4l17p"
+      }
+    },
+    "7+Nk/7p1/9/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "9/7k1/7PN/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "2b1b",
+      "next": "9/8k/7PN/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7+N1/7k1/9/7+B1/9/9/9/9/9 w P2rb4g4s3n4l17p": {
+      "reply": "2b2a",
+      "next": "7k1/9/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p"
+    },
+    "9/7k1/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p": {
+      "reply": "2b2c",
+      "next": "9/9/7kN/9/9/9/9/9/9 b P2r2b4g4s3n4l17p"
+    },
+    "9/7k1/6+B1N/9/9/9/9/9/9 w P2rb4g4s3n4l17p": {
+      "reply": "2b3c",
+      "next": "9/9/6k1N/9/9/9/9/9/9 b P2r2b4g4s3n4l17p"
+    },
+    "9/7G1/7kN/9/9/9/9/9/9 w P2r2b3g4s3n4l17p": {
+      "reply": "2c1d",
+      "next": "9/7G1/8N/8k/9/9/9/9/9 b P2r2b3g4s3n4l17p"
+    },
+    "8G/8k/7pN/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1b1a",
+      "next": "8k/9/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "9/7Gk/7pN/6+B2/9/9/9/9/9 w 2rb3g4s3n4l17p": {
+      "reply": "1b2b",
+      "next": "9/7k1/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7G1/8k/7+BN/9/9/9/9/9/9 w P2rb3g4s3n4l17p": {
+      "reply": "1b2c",
+      "next": "7G1/9/7kN/9/9/9/9/9/9 b P2r2b3g4s3n4l17p"
+    },
+    "9/8k/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p": {
+      "reply": "1b2c",
+      "next": "9/9/7kN/9/9/9/9/9/9 b P2r2b4g4s3n4l17p"
+    },
+    "6k2/5+B1p1/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "3a4b",
+      "next": "9/5k1p1/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b1c",
+      "next": "9/7p1/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b2c",
+      "next": "9/7p1/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/9/6+B2/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b1a",
+      "next": "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "7Gk/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "8k/7G1/9/7+B1/9/9/9/9/9 w P2rb3g4s4n4l17p": {
+      "reply": "1a2b",
+      "next": "9/7k1/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p"
+    },
+    "7k1/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/8k/7PN/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "2c2b+": "9/7+Pk/8N/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "7k1/9/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p": {
+      "attacks": {
+        "P*2b": "7k1/7P1/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/9/7kN/9/9/9/9/9/9 b P2r2b4g4s3n4l17p": {
+      "attacks": {
+        "P*2d": "9/9/7kN/7P1/9/9/9/9/9 w 2r2b4g4s3n4l17p"
+      }
+    },
+    "9/9/6k1N/9/9/9/9/9/9 b P2r2b4g4s3n4l17p": {
+      "attacks": {
+        "P*3d": "9/9/6k1N/6P2/9/9/9/9/9 w 2r2b4g4s3n4l17p"
+      }
+    },
+    "9/7G1/8N/8k/9/9/9/9/9 b P2r2b3g4s3n4l17p": {
+      "attacks": {
+        "P*1e": "9/7G1/8N/8k/8P/9/9/9/9 w 2r2b3g4s3n4l17p"
+      }
+    },
+    "8k/9/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "1c2a+": "7+Nk/9/7p1/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3d3c": "8k/9/6+BpN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3d4d": "8k/9/7pN/5+B3/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "9/7k1/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "1c2a+": "7+N1/7k1/7p1/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3d2c": "9/7k1/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p",
+        "3d3c": "9/7k1/6+BpN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3d4d": "9/7k1/7pN/5+B3/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "7G1/9/7kN/9/9/9/9/9/9 b P2r2b3g4s3n4l17p": {
+      "attacks": {
+        "P*2d": "7G1/9/7kN/7P1/9/9/9/9/9 w 2r2b3g4s3n4l17p",
+        "2a2b": "9/7G1/7kN/9/9/9/9/9/9 w P2r2b3g4s3n4l17p"
+      }
+    },
+    "9/5k1p1/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/7p1/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/7p1/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "3d1b": "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/7k1/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p": {
+      "attacks": {
+        "P*2c": "9/7k1/7P1/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d1c": "9/7k1/8+B/9/9/9/9/9/9 w P2rb4g4s4n4l17p",
+        "2d2c": "9/7k1/7+B1/9/9/9/9/9/9 w P2rb4g4s4n4l17p",
+        "2d3c": "9/7k1/6+B2/9/9/9/9/9/9 w P2rb4g4s4n4l17p"
+      }
+    },
+    "9/7+Pk/8N/7+B1/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1b2b",
+      "next": "9/7k1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l18p"
+    },
+    "7k1/7P1/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "2a1a",
+      "next": "8k/7P1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "9/9/7kN/7P1/9/9/9/9/9 w 2r2b4g4s3n4l17p": {
+      "reply": "2c2d",
+      "next": "9/9/8N/7k1/9/9/9/9/9 b 2r2b4g4s3n4l18p"
+    },
+    "9/9/6k1N/6P2/9/9/9/9/9 w 2r2b4g4s3n4l17p": {
+      "reply": "3c3d",
+      "next": "9/9/8N/6k2/9/9/9/9/9 b 2r2b4g4s3n4l18p"
+    },
+    "9/7G1/8N/8k/8P/9/9/9/9 w 2r2b3g4s3n4l17p": {
+      "reply": "1d1e",
+      "next": "9/7G1/8N/9/8k/9/9/9/9 b 2r2b3g4s3n4l18p"
+    },
+    "7+Nk/9/7p1/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/9/7p1/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "8k/9/6+BpN/9/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1a1b",
+      "next": "9/8k/6+BpN/9/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "8k/9/7pN/5+B3/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1a1b",
+      "next": "9/8k/7pN/5+B3/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7+N1/7k1/7p1/6+B2/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "2b2a",
+      "next": "7k1/9/7p1/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "9/7k1/6+BpN/9/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "2b1b",
+      "next": "9/8k/6+BpN/9/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "9/7k1/7pN/5+B3/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "2b1b",
+      "next": "9/8k/7pN/5+B3/9/9/9/9/9 b 2rb4g4s3n4l17p"
+    },
+    "7G1/9/7kN/7P1/9/9/9/9/9 w 2r2b3g4s3n4l17p": {
+      "reply": "2c2d",
+      "next": "7G1/9/8N/7k1/9/9/9/9/9 b 2r2b3g4s3n4l18p"
+    },
+    "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1a1b",
+      "next": "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7k1/7P1/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "2b1b",
+      "next": "9/8k/7P1/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "9/7k1/8+B/9/9/9/9/9/9 w P2rb4g4s4n4l17p": {
+      "reply": "2b1c",
+      "next": "9/9/8k/9/9/9/9/9/9 b P2r2b4g4s4n4l17p"
+    },
+    "9/7k1/7+B1/9/9/9/9/9/9 w P2rb4g4s4n4l17p": {
+      "reply": "2b2c",
+      "next": "9/9/7k1/9/9/9/9/9/9 b P2r2b4g4s4n4l17p"
+    },
+    "9/7k1/6+B2/9/9/9/9/9/9 w P2rb4g4s4n4l17p": {
+      "reply": "2b3c",
+      "next": "9/9/6k2/9/9/9/9/9/9 b P2r2b4g4s4n4l17p"
+    },
+    "9/7k1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l18p": {
+      "attacks": {
+        "1c2a+": "7+N1/7k1/9/7+B1/9/9/9/9/9 w 2rb4g4s3n4l18p",
+        "2d2c": "9/7k1/7+BN/9/9/9/9/9/9 w 2rb4g4s3n4l18p",
+        "2d3c": "9/7k1/6+B1N/9/9/9/9/9/9 w 2rb4g4s3n4l18p"
+      }
+    },
+    "8k/7P1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2b2a+": "7+Pk/9/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/9/8N/7k1/9/9/9/9/9 b 2r2b4g4s3n4l18p": {
+      "attacks": {}
+    },
+    "9/9/8N/6k2/9/9/9/9/9 b 2r2b4g4s3n4l18p": {
+      "attacks": {}
+    },
+    "9/7G1/8N/9/8k/9/9/9/9 b 2r2b3g4s3n4l18p": {
+      "attacks": {}
+    },
+    "7k1/9/7p1/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "3d4c": "7k1/9/5+B1p1/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/8k/6+BpN/9/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "3c1a": "8+B/8k/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3c2b": "9/7+Bk/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "3c2c": "9/8k/7+BN/9/9/9/9/9/9 w P2rb4g4s3n4l17p"
+      }
+    },
+    "9/8k/7pN/5+B3/9/9/9/9/9 b 2rb4g4s3n4l17p": {
+      "attacks": {
+        "4d1a": "8+B/8k/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p",
+        "4d2b": "9/7+Bk/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p"
+      }
+    },
+    "7G1/9/8N/7k1/9/9/9/9/9 b 2r2b3g4s3n4l18p": {
+      "attacks": {}
+    },
+    "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/8k/7P1/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2c2b+": "9/7+Pk/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d1c": "9/8k/7P+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/9/8k/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": {
+      "attacks": {
+        "P*1d": "9/9/8k/8P/9/9/9/9/9 w 2r2b4g4s4n4l17p"
+      }
+    },
+    "9/9/7k1/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": {
+      "attacks": {
+        "P*2d": "9/9/7k1/7P1/9/9/9/9/9 w 2r2b4g4s4n4l17p"
+      }
+    },
+    "9/9/6k2/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": {
+      "attacks": {
+        "P*3d": "9/9/6k2/6P2/9/9/9/9/9 w 2r2b4g4s4n4l17p"
+      }
+    },
+    "7+N1/7k1/9/7+B1/9/9/9/9/9 w 2rb4g4s3n4l18p": {
+      "reply": "2b2a",
+      "next": "7k1/9/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p"
+    },
+    "9/7k1/7+BN/9/9/9/9/9/9 w 2rb4g4s3n4l18p": {
+      "reply": "2b2c",
+      "next": "9/9/7kN/9/9/9/9/9/9 b 2r2b4g4s3n4l18p"
+    },
+    "9/7k1/6+B1N/9/9/9/9/9/9 w 2rb4g4s3n4l18p": {
+      "reply": "2b3c",
+      "next": "9/9/6k1N/9/9/9/9/9/9 b 2r2b4g4s3n4l18p"
+    },
+    "7+Pk/9/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/9/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p"
+    },
+    "7k1/9/5+B1p1/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "2a1b",
+      "next": "9/8k/5+B1p1/9/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "8+B/8k/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1b1a",
+      "next": "8k/9/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p"
+    },
+    "9/7+Bk/7pN/9/9/9/9/9/9 w 2rb4g4s3n4l17p": {
+      "reply": "1b2b",
+      "next": "9/7k1/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p"
+    },
+    "9/7+Pk/9/7+B1/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b2b",
+      "next": "9/7k1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p"
+    },
+    "9/8k/7P+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b1c",
+      "next": "9/9/7Pk/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/9/8k/8P/9/9/9/9/9 w 2r2b4g4s4n4l17p": {
+      "reply": "1c1d",
+      "next": "9/9/9/8k/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "9/9/7k1/7P1/9/9/9/9/9 w 2r2b4g4s4n4l17p": {
+      "reply": "2c2d",
+      "next": "9/9/9/7k1/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "9/9/6k2/6P2/9/9/9/9/9 w 2r2b4g4s4n4l17p": {
+      "reply": "3c3d",
+      "next": "9/9/9/6k2/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "7k1/9/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "9/9/7kN/9/9/9/9/9/9 b 2r2b4g4s3n4l18p": {
+      "attacks": {}
+    },
+    "9/9/6k1N/9/9/9/9/9/9 b 2r2b4g4s3n4l18p": {
+      "attacks": {}
+    },
+    "9/8k/5+B1p1/9/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "4c2a": "7+B1/8k/7p1/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "8k/9/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p": {
+      "attacks": {
+        "1c2a+": "7+Nk/9/7p1/9/9/9/9/9/9 w 2r2b4g4s3n4l17p"
+      }
+    },
+    "9/7k1/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p": {
+      "attacks": {
+        "1c2a+": "7+N1/7k1/7p1/9/9/9/9/9/9 w 2r2b4g4s3n4l17p"
+      }
+    },
+    "9/7k1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p": {
+      "attacks": {
+        "2d1c": "9/7k1/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l18p",
+        "2d2c": "9/7k1/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l18p",
+        "2d3c": "9/7k1/6+B2/9/9/9/9/9/9 w 2rb4g4s4n4l18p"
+      }
+    },
+    "9/9/7Pk/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/9/9/8k/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "9/9/9/7k1/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "9/9/9/6k2/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "7+B1/8k/7p1/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b2a",
+      "next": "7k1/9/7p1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "7+Nk/9/7p1/9/9/9/9/9/9 w 2r2b4g4s3n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/9/7p1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "7+N1/7k1/7p1/9/9/9/9/9/9 w 2r2b4g4s3n4l17p": {
+      "reply": "2b2a",
+      "next": "7k1/9/7p1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7k1/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l18p": {
+      "reply": "2b1c",
+      "next": "9/9/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "9/7k1/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l18p": {
+      "reply": "2b2c",
+      "next": "9/9/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "9/7k1/6+B2/9/9/9/9/9/9 w 2rb4g4s4n4l18p": {
+      "reply": "2b3c",
+      "next": "9/9/6k2/9/9/9/9/9/9 b 2r2b4g4s4n4l18p"
+    },
+    "7k1/9/7p1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/9/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "9/9/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    },
+    "9/9/6k2/9/9/9/9/9/9 b 2r2b4g4s4n4l18p": {
+      "attacks": {}
+    }
+  },
+  "frontier": [],
+  "oracle_reports": {
+    "7G1/7pk/8N/7+B1/9/9/9/9/9 b 2rb3g4s3n4l17p": "nomate",
+    "9/7pk/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "7k1/7p1/9/7+B1/9/9/9/9/9 b G2rb3g4s4n4l17p": "nomate",
+    "8k/7p1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "9/7k1/8N/7+B1/9/9/9/9/9 b P2rb4g4s3n4l17p": "nomate",
+    "7G1/7p1/7kN/9/9/9/9/9/9 b 2r2b3g4s3n4l17p": "nomate",
+    "7G1/8k/7pN/6+B2/9/9/9/9/9 b 2rb3g4s3n4l17p": "nomate",
+    "9/8k/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "6k2/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "8k/6Gp1/9/7+B1/9/9/9/9/9 b 2rb3g4s4n4l17p": "nomate",
+    "9/8k/7PN/7+B1/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "7k1/9/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p": "nomate",
+    "9/9/7kN/9/9/9/9/9/9 b P2r2b4g4s3n4l17p": "nomate",
+    "9/9/6k1N/9/9/9/9/9/9 b P2r2b4g4s3n4l17p": "nomate",
+    "9/7G1/8N/8k/9/9/9/9/9 b P2r2b3g4s3n4l17p": "nomate",
+    "8k/9/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "9/7k1/7pN/6+B2/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "7G1/9/7kN/9/9/9/9/9/9 b P2r2b3g4s3n4l17p": "nomate",
+    "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "9/7k1/9/7+B1/9/9/9/9/9 b P2rb4g4s4n4l17p": "nomate",
+    "9/7k1/8N/7+B1/9/9/9/9/9 b 2rb4g4s3n4l18p": "nomate",
+    "8k/7P1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "7k1/9/7p1/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "9/8k/6+BpN/9/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "9/8k/7pN/5+B3/9/9/9/9/9 b 2rb4g4s3n4l17p": "nomate",
+    "8k/9/7P1/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "mate",
+    "9/8k/7P1/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "9/9/8k/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": "nomate",
+    "9/9/7k1/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": "nomate",
+    "9/9/6k2/9/9/9/9/9/9 b P2r2b4g4s4n4l17p": "nomate",
+    "9/8k/5+B1p1/9/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "8k/9/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p": "nomate",
+    "9/7k1/7pN/9/9/9/9/9/9 b 2r2b4g4s3n4l17p": "nomate",
+    "9/7k1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l18p": "nomate"
+  },
+  "cutoff": null,
+  "status": "independently_certified_nomate",
+  "engine_calls_this_run": 35,
+  "seconds": 0.3280939420001232,
+  "unresolved_reply": null,
+  "record_goal_achieved": false,
+  "verification": {
+    "reachable_nodes": 121,
+    "edges": 133,
+    "black_no_checks_terminals": 22,
+    "closed": true,
+    "white_continuous_check_cycles_excluded": true,
+    "argument": "All attacks covered, legal defender strategy never reaches mate; finite closed cycles permit no forced finite mate."
+  },
+  "defender_board_only": true
+}

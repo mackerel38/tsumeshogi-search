@@ -1,0 +1,80 @@
+{
+  "scope": "Build a finite closed defender strategy graph, then independently verify it.\n\nEvery Black checking move must remain in the graph. White selects one legal\nreply. No White mating terminal is admitted. Finite closed cycles cannot prove\na forced finite mate, so cycles are valid NoMate evidence (unlike mate proofs).\nEngine NoMate reports guide White choices only and are never proof leaves.\n",
+  "initial": "8k/7p1/9/7+B1/9/9/9/9/9 b G2rb3g4s4n4l17p 1",
+  "nodes": {
+    "8k/7p1/9/7+B1/9/9/9/9/9 b G2rb3g4s4n4l17p": {
+      "attacks": {
+        "G*2a": "7Gk/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p",
+        "G*1b": "8k/7pG/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p"
+      }
+    },
+    "7Gk/7p1/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "1a2a",
+      "next": "7k1/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "8k/7pG/9/7+B1/9/9/9/9/9 w 2rb3g4s4n4l17p": {
+      "reply": "1a1b",
+      "next": "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "7k1/7p1/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "2d1c": "9/7pk/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d2c": "9/7pk/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l17p",
+        "2d3d": "9/7pk/9/6+B2/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "9/7pk/8+B/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b1c",
+      "next": "9/7p1/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/7+B1/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b2c",
+      "next": "9/7p1/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/9/6+B2/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1b1a",
+      "next": "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p"
+    },
+    "9/7p1/8k/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "9/7p1/7k1/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    },
+    "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": {
+      "attacks": {
+        "3d1b": "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p"
+      }
+    },
+    "8k/7p+B/9/9/9/9/9/9/9 w 2rb4g4s4n4l17p": {
+      "reply": "1a1b",
+      "next": "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p"
+    },
+    "9/7pk/9/9/9/9/9/9/9 b 2r2b4g4s4n4l17p": {
+      "attacks": {}
+    }
+  },
+  "frontier": [],
+  "oracle_reports": {
+    "9/7pk/9/7+B1/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate",
+    "8k/7p1/9/6+B2/9/9/9/9/9 b 2rb4g4s4n4l17p": "nomate"
+  },
+  "cutoff": null,
+  "status": "independently_certified_nomate",
+  "engine_calls_this_run": 2,
+  "seconds": 0.3500025379998988,
+  "unresolved_reply": null,
+  "record_goal_achieved": false,
+  "verification": {
+    "reachable_nodes": 13,
+    "edges": 12,
+    "black_no_checks_terminals": 4,
+    "closed": true,
+    "white_continuous_check_cycles_excluded": true,
+    "argument": "All attacks covered, legal defender strategy never reaches mate; finite closed cycles permit no forced finite mate."
+  },
+  "defender_board_only": true
+}
