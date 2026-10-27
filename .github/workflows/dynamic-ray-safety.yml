@@ -10,6 +10,10 @@ on:
         description: Maximum expanded positions per job
         required: true
         default: '300000'
+      resume_run:
+        description: Prior run number, or zero to start fresh
+        required: true
+        default: '0'
 permissions:
   contents: read
 jobs:
@@ -45,6 +49,7 @@ jobs:
     permissions:
       contents: read
       packages: read
+      actions: read
     strategy:
       fail-fast: false
       matrix:
@@ -57,6 +62,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        if: inputs.resume_run != '0'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ inputs.resume_run }}
+          pattern: dynamic-ray-${{ matrix.candidate }}-${{ matrix.policy }}-${{ inputs.resume_run }}
+          path: resume
+          merge-multiple: true
       - name: Validate and search
         env:
           IMAGE: ${{ needs.image.outputs.image }}
@@ -64,9 +77,11 @@ jobs:
           POLICY: ${{ matrix.policy }}
           SECONDS_LIMIT: ${{ inputs.seconds }}
           NODES_LIMIT: ${{ inputs.nodes }}
+          RESUME_RUN: ${{ inputs.resume_run }}
         run: |
-          python -c 'import os; s=int(os.environ["SECONDS_LIMIT"]); n=int(os.environ["NODES_LIMIT"]); assert 1 <= s <= 600 and 10 <= n <= 1000000'
+          python -c 'import os; s=int(os.environ["SECONDS_LIMIT"]); n=int(os.environ["NODES_LIMIT"]); r=int(os.environ["RESUME_RUN"]); assert 1 <= s <= 600 and 10 <= n <= 1000000 and r >= 0'
           mkdir -p results
+          if [ "$RESUME_RUN" != 0 ]; then test -f resume/state.json.gz; gzip -dc resume/state.json.gz > results/state.json; fi
           docker run --rm --memory 5g --entrypoint python -v "$PWD/results:/results" "$IMAGE" research/nomate_safety_search.py --source "candidates/dynamic-ray/${CANDIDATE}.json" --output /results/state.json --policy "$POLICY" --seconds "$SECONDS_LIMIT" --nodes "$NODES_LIMIT"
       - name: Compress result
         if: always()

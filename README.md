@@ -68,3 +68,5 @@ python scripts/run_search.py --candidate horse-5d --seconds 5 --nodes 10000 --ou
 `Dynamic ray safety analysis` を手動実行すると、1段下の配置から、44同玉後・34玉後の2局面を、それぞれcapture・sparseの2方針で探索します。合計4ジョブです。出力は候補・方針・run番号ごとに圧縮Artifactとして保存します。
 
 閉じた不詰戦略が見つかるまでUNKNOWNは未確定です。閉じた戦略を得ても、玉方手の移動合・駒打ち合を別途確認します。これは新たな長手数作品の主張ではありません。
+
+同じ4ジョブを継続する場合、`resume_run` に前回のrun番号を指定します。候補と方針に対応したArtifactを取得し、根局面・方針は探索プログラムが照合します。`nodes` は再開後の追加数ではなく、保存済み局面を含めた総数の上限です。
